@@ -1,2 +1,2 @@
-class HomeApplication < ApplicationController
+class HomeController < ApplicationController
 end
