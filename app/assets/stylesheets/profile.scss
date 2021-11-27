@@ -1,0 +1,41 @@
+@import 'variables';
+
+$image_size: 56px;
+
+.header_text{
+    height: 24px;
+    left: 38.13%;
+    right: 38.4%;
+    margin-top: 46px;
+
+    font-family: Poppins Medium;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+
+    color: #333A42;
+  }
+
+.profilePage{
+
+    &_user {
+        position: absolute;
+        width: 76.88px;
+        height: 76.88px;
+        left: 148.56px;
+        // top: 105.56px;
+    
+      &_image {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            width: $image_size;
+            height: $image_size;
+        }
+      }
+    }
+}
