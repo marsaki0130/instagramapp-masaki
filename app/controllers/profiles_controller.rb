@@ -10,4 +10,10 @@ class ProfilesController < ApplicationController
     def edit
     end
 
+    private
+    def profile_params
+      params.require(:profile).permit(
+          :avatar
+      )
+    end
 end
