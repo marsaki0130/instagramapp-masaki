@@ -39,3 +39,29 @@ $image_size: 56px;
       }
     }
 }
+
+
+.profilePage_middle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    position: absolute;
+    width: 241px;
+    height: 47px;
+    left: -85px;
+    top: 253px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .list {
+    font-size: 14px;
+    line-height: 21px;
+    color: #9E9E9E;
+    a {
+      font-size: 14px;
+      line-height: 21px;
+      color: #9E9E9E;
+    }
+  }
+  
