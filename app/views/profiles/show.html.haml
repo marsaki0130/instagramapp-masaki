@@ -1,19 +1,17 @@
 .container
-  .profilePage_user
-    .header_text
-      = @user.username
-    .profilePage_user_image
-      = image_tag 'default-avatar.png'
-      .profilePage_user_actionButton
-        = link_to 'edit', edit_profile_path
+  .profilePage_header
+    .profile_back_icon
+      = link_to image_tag(''), :back
+    .profile_username
+      = current_user.username
+    
 
-    .profilePage_middle
-      .list
-        %p.title Posts
-      .list
-        %p.title Follower
-      .list
-        %p.title Follow
+  .avatar
+    - if current_user.profile&.avatar&.attached?
+      = image_tag @user.profile.avatar, class: 'profile_usericon'
+    - else 
+      = image_tag 'default-avatar.png', class: 'profile_usericon'
+
 
 
 = javascript_pack_tag 'profile'
