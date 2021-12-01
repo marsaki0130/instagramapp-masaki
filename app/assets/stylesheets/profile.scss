@@ -8,6 +8,11 @@ $image_size: 56px;
   margin-bottom : 30px;
 }
 
+
+.profile_back_icon img{
+  width : 20px;
+}
+
 .profile_usericon{
   margin-top: 100px;
   width: 76px;
@@ -29,3 +34,38 @@ $image_size: 56px;
  }
 
 
+ .account_status {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 20px;
+  
+}
+
+.status-text{
+  text-decoration: none;
+  color: gray;
+}
+
+.post_status{
+  margin-left: 11px;
+}
+
+.followers_status{
+  margin-left: 39px;
+  text-decoration: none;
+  color: black;
+}
+
+.following_status{
+  margin-left: 31px;
+  text-decoration: none;
+  color: black;
+}

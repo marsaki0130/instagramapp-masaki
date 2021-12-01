@@ -1,7 +1,7 @@
 .container
   .profilePage_header
     .profile_back_icon
-      = link_to image_tag(''), :back
+      = link_to image_tag('矢印.png'), :back
     .profile_username
       = current_user.username
     
@@ -11,6 +11,20 @@
       = image_tag @user.profile.avatar, class: 'profile_usericon'
     - else 
       = image_tag 'default-avatar.png', class: 'profile_usericon'
+
+
+  .account_status
+    .post_status
+      %p
+    %p.status-text Posts
+
+    .followers_status
+      %p
+    %p.status-text Followers
+
+    .following_status
+      %p
+    %p.status-text Following
 
 
 
