@@ -34,6 +34,33 @@ $image_size: 56px;
  }
 
 
+ .avatar_PostImage{
+   text-align: center;
+   margin: 15px;
+ }
+
+ .post_image{
+   cursor: pointer;
+ }
+
+ .image_form {
+  display: none;
+}
+
+ .avatar_submit_btn {
+  border : none;
+  margin-left : 5px;
+  color: #4F4F4F;
+  cursor: pointer;
+  
+  background-color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ }
+
+ 
+
+
  .account_status {
   font-style: normal;
   font-weight: 500;

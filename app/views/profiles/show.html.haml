@@ -13,6 +13,16 @@
       = image_tag 'default-avatar.png', class: 'profile_usericon'
 
 
+  .avatar_PostImage
+    = form_with(model:@profile, url:profile_path, method:'get', local:true ) do |f|
+      .filed
+        = f.label :avatar, '画像を選択', class: 'post_image'
+        %br/
+        = f.file_field :avatar, class: 'image_form'
+      .actions
+        = f.submit 'SUBMIT', class: 'avatar_submit_btn'
+
+
   .account_status
     .post_status
       %p
