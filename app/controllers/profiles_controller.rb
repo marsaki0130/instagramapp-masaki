@@ -3,12 +3,12 @@ class ProfilesController < ApplicationController
 
     def show
         @user = current_user
-        @profile = current_user.profile
+        @profile = current_user.build_profile
     end
 
 
     def update
-      @profile = current_user.prepare_profile
+      @profile = current_user.build_profile
       @profile.id = current_user.id
       @profile.assign_attributes(profile_params)
       if @profile.save
@@ -21,8 +21,6 @@ class ProfilesController < ApplicationController
 
     private
     def profile_params
-      params.require(:profile).permit(
-          :avatar
-      )
+      params.permit(:user, :username, :avatar)
     end
 end

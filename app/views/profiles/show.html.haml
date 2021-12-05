@@ -14,7 +14,7 @@
 
 
   .avatar_PostImage
-    = form_with(model:@profile, url:profile_path, method:'get', local:true ) do |f|
+    = form_with(model:@profile, url:profile_path, method:'put', local:true ) do |f|
       .filed
         = f.label :avatar, '画像を選択', class: 'post_image'
         %br/

@@ -4,6 +4,10 @@ class UsersController < ApplicationController
         @account = @user.account
     end
 
+    def prepare_profile
+        profile || build_profile
+    end
+
     def create
     end
 
