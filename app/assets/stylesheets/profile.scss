@@ -2,66 +2,97 @@
 
 $image_size: 56px;
 
-.header_text{
-    height: 24px;
-    left: 38.13%;
-    right: 38.4%;
-    margin-top: 46px;
 
-    font-family: Poppins Medium;
-    font-size: 16px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-
-    color: #333A42;
-  }
-
-.profilePage{
-
-    &_user {
-        position: absolute;
-        width: 76.88px;
-        height: 76.88px;
-        left: 148.56px;
-        // top: 105.56px;
-    
-      &_image {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        img {
-            width: $image_size;
-            height: $image_size;
-        }
-      }
-    }
+.profilePage_header {
+  margin-top : 20px;
+  margin-bottom : 30px;
 }
 
 
-.profilePage_middle {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    position: absolute;
-    width: 241px;
-    height: 47px;
-    left: -85px;
-    top: 253px;
-    display: flex;
-    justify-content: space-around;
-  }
+.profile_back_icon img{
+  width : 20px;
+}
 
-  .list {
-    font-size: 14px;
-    line-height: 21px;
-    color: #9E9E9E;
-    a {
-      font-size: 14px;
-      line-height: 21px;
-      color: #9E9E9E;
-    }
-  }
+.profile_usericon{
+  margin-top: 100px;
+  width: 76px;
+  height: 76px;
+  border-radius: 99px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.profile_username {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   text-align : center;
+   position :relative;
+   top : -25px;
+   font-weight : bold;
+   pointer-events : none;
+   font-size : 20px;
+ }
+
+
+ .avatar_PostImage{
+   text-align: center;
+   margin: 15px;
+ }
+
+ .post_image{
+   cursor: pointer;
+ }
+
+ .image_form {
+  display: none;
+}
+
+ .avatar_submit_btn {
+  border : none;
+  margin-left : 5px;
+  color: #4F4F4F;
+  cursor: pointer;
   
+  background-color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ }
+
+ 
+
+
+ .account_status {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 20px;
+  
+}
+
+.status-text{
+  text-decoration: none;
+  color: gray;
+}
+
+.post_status{
+  margin-left: 11px;
+}
+
+.followers_status{
+  margin-left: 39px;
+  text-decoration: none;
+  color: black;
+}
+
+.following_status{
+  margin-left: 31px;
+  text-decoration: none;
+  color: black;
+}
