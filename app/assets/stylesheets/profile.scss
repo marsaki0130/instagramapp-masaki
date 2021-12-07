@@ -33,6 +33,19 @@ $image_size: 56px;
    font-size : 20px;
  }
 
+ .profilePage_user_actionButton{
+    display: flex;
+    justify-content: right;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 0px 8px;
+
+    a {
+      color: $primary-color;
+    }
+ }
+
 
  .avatar_PostImage{
    text-align: center;

@@ -1,0 +1,8 @@
+.container
+  = form_with(model:@profile, url:profile_path, method:'put', local:true ) do |f|
+    %div
+      = f.label :avatar, 'アバターを選択', class: 'post_image'
+    %div
+      = f.file_field :avatar, class: 'image_form'
+    .actions
+      = f.submit 'SUBMIT', class: 'avatar_submit_btn'
