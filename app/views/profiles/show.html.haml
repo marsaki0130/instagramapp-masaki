@@ -9,11 +9,7 @@
     
 
   .avatar
-    - if current_user.profile&.avatar&.attached?
-      = image_tag @user.profile.avatar, class: 'profile_usericon'
-    - else 
-      = image_tag 'default-avatar.png', class: 'profile_usericon'
-
+    = image_tag current_user.avatar_image, class:'profile_usericon'
 
 
   .account_status
