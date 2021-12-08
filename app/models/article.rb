@@ -14,4 +14,6 @@
 #  index_articles_on_user_id  (user_id)
 #
 class Article < ApplicationRecord
+    belongs_to :user
+    belongs_to :username
 end
