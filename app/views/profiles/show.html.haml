@@ -1,9 +1,9 @@
 .container
   .profilePage_header
     .profile_back_icon
-      = link_to image_tag('矢印.png'), :back
+      = link_to image_tag('back.svg'), :back
     .profilePage_user_actionButton
-      =link_to 'Edit', edit_profile_path
+      =link_to 'Edit Profile', edit_profile_path
     .profile_username
       = current_user.username
     
