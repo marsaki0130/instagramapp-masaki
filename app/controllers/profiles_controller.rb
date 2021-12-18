@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
 
 
     def edit
-      @profile = current_user.profile || current_user.build_profile
+      @profile = current_user.prepare_profile
     end
 
     def update
@@ -24,6 +24,6 @@ class ProfilesController < ApplicationController
 
     private
     def profile_params
-      params.require(:profile).permit(:avatar, :username)
+      params.require(:profile).permit(:avatar)
     end
 end
