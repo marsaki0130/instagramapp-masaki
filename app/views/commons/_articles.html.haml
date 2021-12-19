@@ -1,0 +1,15 @@
+.container
+  .article
+    .article_nav
+      = image_tag current_user.avatar_image, class:'article_image'
+      .article_nav_text
+        .article_nav_text_name
+          %p= current_user.username
+        .article_nav_text_time
+          %p 3 hours ago
+      .article_content
+        
+      .article_action
+        = image_tag 'heart-active.png', class: 'article_icon'
+        = image_tag 'comment.png', class: 'article_icon'
+        = image_tag 'share.png', class: 'article_icon'
