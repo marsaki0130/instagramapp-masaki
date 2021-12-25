@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
       @articles = Article.all
     end
 
+    def show
+      @article = current_user
+    end
+
     def new
       @article = current_user.articles.build #ログインしてるユーザーを取得&空の箱作る
     end
@@ -12,15 +16,21 @@ class ArticlesController < ApplicationController
     def create
         @article = current_user.articles.build(article_params)
         if @article.save
-          redirect_to article_path(@article), notice: '保存できました'
+          redirect_to root_path, notice: '保存できました'
         else
           flash.now[:error] = '失敗しました'
           render :new
         end
     end
 
+    def destroy
+      article = current_user.articles.find(params[:id])
+      article.destroy!
+      redirect_to root_path, notice: '削除に成功しました'
+    end
+
     private
     def article_params
-        params.require(:article).permit(:title, :content, :eyecatch)
+        params.require(:article).permit(:content, eyecatch: [])
     end
 end
