@@ -11,19 +11,20 @@
       .article_content
         - article.eyecatch.each do |eyecatch| 
           = image_tag eyecatch, class: 'article_content_image'
-      .article_action
-        .article_heart.hidden.active-heart
-        = image_tag 'heart-active.svg', class: 'article_icon'
-        .article_heart.hidden.inactive-heart
-        = image_tag 'heart.svg', class: 'article_icon'
-        = image_tag 'comment.png', class: 'article_icon'
-        .article_share
-          = link_to "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' do
-            = image_tag 'share.png', class: 'article_icon'
-    .article_liked
-      %p Jasmine and 12000 other liked your post
-    .article_text
-      .article_user_name
-        %p ____sktm____
-      .article_text_content
-        %p= article.content
+      -if user_signed_in?
+        .article_action
+          .article_heart.hidden.active-heart
+          = image_tag 'heart-active.svg', class: 'article_icon'
+          .article_heart.hidden.inactive-heart
+            = image_tag 'heart.svg', class: 'article_icon'
+          = image_tag 'comment.png', class: 'article_icon'
+          .article_share
+            = link_to "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' do
+              = image_tag 'share.png', class: 'article_icon'
+      .article_liked
+        %p Jasmine and 12000 other liked your post
+      .article_text
+        .article_user_name
+          %p ____sktm____
+        .article_text_content
+          %p= article.content
