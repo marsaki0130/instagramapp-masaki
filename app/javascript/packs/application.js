@@ -11,3 +11,10 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import $ from 'jquery'
+import axios from 'axios'
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.alert('DOM LOADED')
+})
