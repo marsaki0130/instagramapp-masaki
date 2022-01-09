@@ -18,7 +18,7 @@
           .article_heart.hidden.inactive-heart
             = image_tag 'heart.svg', class: 'article_icon'
           .article_comment
-            = link_to new_article_comment_path(article) do
+            = link_to article_comments_path(article) do
               = image_tag 'comment.png', class: 'article_icon'
           .article_share
             = link_to "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' do

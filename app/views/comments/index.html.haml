@@ -1,0 +1,12 @@
+.container
+  .header_comment
+    %div
+      %p.page_title Comment
+
+= form_with(model:[@article, @comment],url:article_comments_path, local: true) do |f|
+  .comment_form
+    .comment_form_container
+      %label.comment_create-icon
+        = image_tag 'comment.png', class:'comment-icon'
+      = f.text_area :content, class: 'comment_text-area'
+    = f.submit '保存'
