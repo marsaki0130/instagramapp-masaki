@@ -9,9 +9,9 @@ class CommentsController < ApplicationController
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.build(comment_params)
-    binding.pry
+    @comment.user_id = current_user.id
     if @comment.save 
-      redirect_to article_path(article), notice:'コメントを追加'
+      redirect_to action: :index, notice:'コメントを追加'
     else
       flash.now[:error] = '失敗しました'
       render :index
@@ -20,6 +20,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:content)
+    params.require(:comment).permit(:content).merge(user_id: current_user.id)
   end
 end
