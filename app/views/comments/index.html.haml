@@ -2,6 +2,17 @@
   .header_comment
     %div
       %p.page_title Comment
+  .comment
+    -  @comment.each do |comment|
+      .comment-content
+        .comment_content_avatar
+          = image_tag @article.user.avatar_image, class:'comment_content_avatar_image'
+        .comment_content_texts
+          .comment_content_username
+            %p= @article.user.username
+          .comment_content_text
+            %p= comment.content
+    
 
 = form_with(model:[@article, @comment],url:article_comments_path, local: true) do |f|
   .comment_form
