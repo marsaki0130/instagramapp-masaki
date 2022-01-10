@@ -1,0 +1,56 @@
+.header_comment{
+  text-align: center;
+  color: #333A42;
+  font-size: 16px;
+  margin-bottom: 52px;
+}
+
+.comment{
+  margin-bottom: 20px;
+
+  &_content{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &_avatar{
+      margin-right: 18px;
+      margin-top: 6px;
+
+      &_image{
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &_texts{
+      color: #9B9B9B;
+      font-size: 14px;
+      line-height: 20px
+      word-break normal;
+    }
+
+    &_username{
+      color: #414040;
+      font-size: 16px;
+      line-height: 24px
+      margin-bottom 8px;
+    }
+  }
+
+  &_create-icon{
+    height: 42px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+        
+    input {
+        display: none;
+    }
+  }
+}
+
+
+

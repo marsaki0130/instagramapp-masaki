@@ -5,13 +5,10 @@ class ArticlesController < ApplicationController
       @articles = Article.all
     end
 
-    def show
-      @article = current_user
-    end
-
     def new
       @article = current_user.articles.build #ログインしてるユーザーを取得&空の箱作る
     end
+
 
     def create
         @article = current_user.articles.build(article_params)

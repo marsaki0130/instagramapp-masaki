@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :articles do
-    resource :like, only: [:create, :destroy]
+    resources :comments, only: [:index, :create]
+
+    resource :like, only: [:show, :create, :destroy]
   end
 
   resource :profile, only: [:show, :edit, :update]

@@ -17,7 +17,9 @@
           = image_tag 'heart-active.svg', class: 'article_icon'
           .article_heart.hidden.inactive-heart
             = image_tag 'heart.svg', class: 'article_icon'
-          = image_tag 'comment.png', class: 'article_icon'
+          .article_comment
+            = link_to article_comments_path(article) do
+              = image_tag 'comment.png', class: 'article_icon'
           .article_share
             = link_to "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' do
               = image_tag 'share.png', class: 'article_icon'
@@ -28,3 +30,5 @@
           %p ____sktm____
         .article_text_content
           %p= article.content
+
+  = javascript_pack_tag 'article'
