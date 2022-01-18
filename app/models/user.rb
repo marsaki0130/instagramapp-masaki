@@ -46,6 +46,18 @@ class User < ApplicationRecord
     likes.exists?(article_id: article.id)
   end
 
+  def following_count
+    followings.count
+  end
+
+  def follower_count
+    followers.count
+  end
+
+  def article_count
+    articles.count
+  end
+
   def follow!(user)
     user_id = get_user_id(user)
     following_relationships.create!(following_id: user_id)
