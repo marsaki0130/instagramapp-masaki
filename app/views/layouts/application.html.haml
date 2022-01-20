@@ -19,7 +19,7 @@
               / 戻るボタンの表示 urlを覚えている
               = image_tag 'back.svg', class: 'header_back'
           %p.header_pageTitle
-            = link_to 'instagram', root_path
+            = link_to 'instagram', articles_path
           %p.header_camera
             = link_to new_article_path do
               = image_tag 'camera.png', class:'header_central'
