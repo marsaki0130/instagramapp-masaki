@@ -21,11 +21,11 @@
     .post_status
       %p.status-count= current_user.article_count
       %p.status-text Posts
-
-    .followers_status
-      %p.status-count= current_user.follower_count
-      %p.status-text Followers
-
-    .following_status
-      %p.status-count= current_user.following_count
-      %p.status-text Following
+    = link_to account_followers_path(current_user) do
+      .followers_status
+        %p.status-count= current_user.follower_count
+        %p.status-text Followers
+    = link_to account_followings_path(current_user) do
+      .following_status
+        %p.status-count= current_user.following_count
+        %p.status-text Following

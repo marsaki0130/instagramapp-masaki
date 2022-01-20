@@ -1,0 +1,10 @@
+.container
+  .header_top
+    %div.follow_title
+      %p.header_title Followings
+  -  @followings.each do |following|
+    .follow
+      %div
+        = image_tag following.avatar_image, class: 'follow_avatar'
+      %div
+        %p.follow_name= following.username
