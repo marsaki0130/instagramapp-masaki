@@ -9,6 +9,9 @@ class ArticlesController < ApplicationController
       @article = current_user.articles.build #ログインしてるユーザーを取得&空の箱作る
     end
 
+    def show
+    end
+
 
     def create
         @article = current_user.articles.build(article_params)
