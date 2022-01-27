@@ -19,4 +19,8 @@ class Article < ApplicationRecord
     has_many :comments, dependent: :destroy
 
     belongs_to :user
+
+    def like_count
+      likes.count
+    end
 end

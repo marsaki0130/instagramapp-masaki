@@ -2,11 +2,14 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!
 
     def index
-      @articles = Article.all
+      @article = Article.all
     end
 
     def new
       @article = current_user.articles.build #ログインしてるユーザーを取得&空の箱作る
+    end
+
+    def show
     end
 
 
