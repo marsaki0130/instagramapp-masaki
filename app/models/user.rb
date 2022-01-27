@@ -43,7 +43,7 @@ class User < ApplicationRecord
   end
 
   def has_liked?(article)
-    likes.exists?(article_id: article.ids)
+    likes.exists?(article_id: article.id)
   end
 
   def following_count
