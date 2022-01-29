@@ -8,14 +8,12 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-import $ from 'jquery'
-import axios from 'axios'
+require("trix")
+require("@rails/actiontext")
 
-document.addEventListener('turbolinks:load', () => {
-    const dataset = $('#article-show').data()
-    const articleId = dataset.articleId
-    axios.get(`/articles/${articleId}/like`)
-      .then((response) => {
-          console.log(response)
-      })
+import $ from 'jquery'
+
+document.addEventListener('DOMContendLoaded', () => {
+  window.alert('DOM LOADED')
+  console.log('aaaaa')
 })

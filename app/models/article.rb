@@ -14,6 +14,7 @@
 #
 class Article < ApplicationRecord
     has_many_attached :eyecatch
+    has_rich_text :content
     
     has_many :likes, dependent: :destroy
     has_many :comments, dependent: :destroy
