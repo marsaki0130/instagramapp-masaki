@@ -1,6 +1,6 @@
 .container
   - @article.each do |article|
-    .article
+    .article#article-commons{data: {article_id: article.id}}
       .article_nav
         = link_to account_path(article.user) do
           = image_tag article.user.avatar_image, class:'article_nav_avatar'
@@ -14,15 +14,10 @@
           = image_tag eyecatch, class: 'article_content_image'
       - if user_signed_in?
         .article_action
-          - if current_user.has_liked?(article)
-            .article_heart
-              = link_to article_like_path(article), data: {method: 'delete'} do
-                = image_tag 'heart-active.svg', class: 'article_icon'
-          - else
-            .article_heart
-              = link_to article_like_path(article), data: {method: 'post'} do
-                = image_tag 'heart.svg', class: 'article_icon'
-
+          .article_heart.hidden.active-heart
+            = image_tag 'heart-active.svg', class: 'article_icon'
+          .article_heart.hidden.inactive-heart
+            = image_tag 'heart.svg', class: 'article_icon'
           .article_comment
             = link_to article_comments_path(article) do
               = image_tag 'comment.png', class: 'article_icon'
@@ -39,8 +34,6 @@
           %p ____sktm____
         .article_text_content
           %p= article.content
-
-  = javascript_pack_tag 'article'
 
 
 

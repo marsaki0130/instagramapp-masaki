@@ -4,18 +4,28 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+
+require("trix")
+require("@rails/actiontext")
 
 import $ from 'jquery'
 import axios from 'axios'
 
-document.addEventListener('turbolinks:load', () => {
-    const dataset = $('#article-show').data()
-    const articleId = dataset.articleId
-    axios.get(`/articles/${articleId}/like`)
-      .then((response) => {
-          console.log(response)
-      })
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dataset = $('#article-commons').data()
+  const articleId = dataset.articleId
+
+  axios.get(`/articles/${articleId}/like`)
+    .then((response) => {
+      const hasLiked = response.data.hasLiked
+      if (hasLiked) {
+        $('.active-heart').removeClass('hidden')
+      } else {
+        $('.inactive-heart').removeClass('hidden')
+      }
+    })
 })
