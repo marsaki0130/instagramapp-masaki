@@ -19,13 +19,15 @@
 
   .account_status
     .post_status
-      %p.status-count= current_user.article_count
+      %p.status-count= user.article_count
       %p.status-text Posts
-    = link_to account_followers_path(current_user) do
+    = link_to account_followers_path(user) do
       .followers_status
-        %p.status-count= current_user.follower_count
+        %p.status-count= user.follower_count
         %p.status-text Followers
-    = link_to account_followings_path(current_user) do
+    = link_to account_followings_path(user) do
       .following_status
-        %p.status-count= current_user.following_count
+        %p.status-count= user.following_count
         %p.status-text Following
+
+= javascript_pack_tag 'article'

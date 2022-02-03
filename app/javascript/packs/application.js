@@ -15,17 +15,17 @@ import axios from 'axios'
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const dataset = $('#article-commons').data()
-  const articleId = dataset.articleId
+// document.addEventListener('DOMContentLoaded', () => {
+//   const dataset = $('#article-commons').data()
+//   const articleId = dataset.articleId
 
-  axios.get(`/articles/${articleId}/like`)
-    .then((response) => {
-      const hasLiked = response.data.hasLiked
-      if (hasLiked) {
-        $('.active-heart').removeClass('hidden')
-      } else {
-        $('.inactive-heart').removeClass('hidden')
-      }
-    })
-})
+//   axios.get(`/articles/${articleId}/like`)
+//     .then((response) => {
+//       const hasLiked = response.data.hasLiked
+//       if (hasLiked) {
+//         $('.inactive-heart').removeClass('hidden')
+//       } else {
+//         $('.active-heart').removeClass('hidden')
+//       }
+//     })
+// })
