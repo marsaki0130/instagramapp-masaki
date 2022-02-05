@@ -1,31 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-    let!(:user) do
-      User.create!({
-        username: 'keisuke',
-        email: 'test@example.com',
-        password: 'password'
-      })
-    end
-
-
+    let!(:user) { create(:user)}
 
   context 'ユーザー名と内容が入力されている場合' do
-    let!(:user) do
-      User.create!({
-        username: 'keisuke',
-        email: 'test@example.com',
-        password: 'password'
-      })
-    end
-
-    # 記事を保存する
-    let!(:article) do
-      user.articles.build({
-        content:Faker::Lorem.characters(number: 300)
-      })
-    end
+    let!(:article) { build(:article, user: user)}
 
     it '記事を保存できる' do
       expect(article).to be_valid #記事が有効であることを期待する
@@ -34,10 +13,10 @@ RSpec.describe Article, type: :model do
 
 
   context 'コンテントが一文字の場合' do
-    let!(:article) do
-      user.articles.create({
-        content:Faker::Lorem.characters(number: 1)
-      })
+    let!(:article) { build(:article, content: Faker::Lorem.characters(number: 1), user: user)}
+
+    before do
+      article.save
     end
 
     it '記事を保存できない' do
