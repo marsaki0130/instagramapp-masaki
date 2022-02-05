@@ -16,7 +16,7 @@ class Article < ApplicationRecord
     has_many_attached :eyecatch
     # has_rich_text :content
 
-    validate :content, presence: true
+    validates :content, presence: true, length: {minimum: 2}
     
     has_many :likes, dependent: :destroy
     has_many :comments, dependent: :destroy
