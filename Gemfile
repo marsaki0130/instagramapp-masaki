@@ -54,6 +54,7 @@ group :development do
   gem 'erb2haml'
   gem 'letter_opener'
   gem 'letter_opener_web', '~> 1.0'
+  gem 'rails-i18n'
 end
 
 group :test do

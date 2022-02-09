@@ -8,7 +8,6 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
     attributes:
       article:
-        title: 'タイトル'
         content: '内容'
   date:
     abbr_day_names:
@@ -205,6 +204,6 @@ ja:
     am: 午前
     formats:
       default: "%Y/%m/%d"
-      long: "%m/%d %H:%M"
+      long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
