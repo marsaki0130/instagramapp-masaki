@@ -3,6 +3,7 @@
     "description": "This is blogapp",
     "keywords": [],
     "website": "",
+    "stack": "heroku-18",
     "repository": "https://github.com/marsaki0130/instagramapp-masaki",
     "env": {},
     "addons": [
