@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
@@ -27,6 +25,7 @@ gem 'annotate'
 gem 'active_model_serializers'
 gem 'faker'
 gem 'sidekiq'
+gem 'aws-sdk-s3', require: false
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
@@ -40,6 +39,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'dotenv-rails'
 end
 
 group :development do

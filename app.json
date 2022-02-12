@@ -1,0 +1,18 @@
+{
+    "name": "instagramapp-masaki",
+    "description": "This is blogapp",
+    "keywords": [],
+    "website": "",
+    "stack": "heroku-18",
+    "repository": "https://github.com/marsaki0130/instagramapp-masaki",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
+  
